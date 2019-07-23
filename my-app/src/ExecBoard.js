@@ -67,7 +67,7 @@ makeCard = project => {
           <br />
           <br />
           <div style={{ textAlign: 'left' }}>
-            {project.description}
+            {project.major}
             {project.highlight && (
               <div>
                 <br />
@@ -78,25 +78,50 @@ makeCard = project => {
         </div>
       </div>
       <footer className="card-footer">
-        {project.link && (
+        {project.igsocial && (
           <a
-            href={project.link}
+            href={project.igsocial}
             target="_blank"
             rel="noopener noreferrer"
             className="card-footer-item"
           >
-            Link
+            Instagram
           </a>
         )}
         <a
-          href={project.github}
+          href={project.fbsocial}
           target="_blank"
           rel="noopener noreferrer"
           className="card-footer-item"
         >
-          GitHub
+          Facebook
         </a>
+        {project.igsocial && (
+          <a
+            href={project.twsocial}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="card-footer-item"
+          >
+            Twitter
+          </a>
+        )}
       </footer>
     </div>
   );
 };
+
+render() {
+  return (
+    <div id="projects"=style {{width: '100%'}}>
+      <div
+        style == {{
+          fontSize:'4em',
+          margin: 30,
+          marginTop: 0.
+          marginBottom: 10
+        }}
+        >
+
+  )
+}
