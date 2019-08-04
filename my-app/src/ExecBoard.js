@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-let execs = require('./execboard.json');
+let execs_list = require('./execboard.json');
 
-execs.sort((a,b)) {
+execs_list.sort((a, b) => {
   return a.priority - b.priority;
 });
 
-export default class ProjectComponent extends Component {
+export default class ExecComponent extends Component {
   getExecs = () => {
     return (
       <Grid
@@ -14,8 +14,8 @@ export default class ProjectComponent extends Component {
       spacing = {24}
       direction = "row"
       justify = "center">
-      {execs.map(project => {
-        if (exec.hidden) {
+      {execs_list.map(project => {
+        if (project.hidden) {
           return null;
         }
         return (
@@ -27,20 +27,25 @@ export default class ProjectComponent extends Component {
       </Grid>
     );
   };
-};
 
-makeCard = project => {
+makeCard = (project) => {
   if (project.hidden) {
     return null;
   }
   return (
     <div
       className="card"
-      style={{ margin: 10, minWidth: '40vw', maxWidth: '75vw' }}
+      style={{ margin: 20, minWidth: '40vw', maxWidth: '75vw' }}
     >
       <header className="card-header">
-        <p className="card-header-title" style={{ fontSize: '1.5em' }}>
-          {project.name}
+        <p className="card-header-title"
+        style={{
+          fontSize: '1.5em',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+        >
+          <b> {project.name + " - " + project.role} </b>
         </p>
       </header>
       <div className="card-content" style={{}}>
@@ -60,21 +65,13 @@ makeCard = project => {
                   marginRight: 'auto'
                 }}
               />
-              <br />
             </div>
           )}
+          <div style={{ textAlign: 'center' }}>
+              <b>{project.major}</b>
+            </div>
           <i>{project.summary}</i>
           <br />
-          <br />
-          <div style={{ textAlign: 'left' }}>
-            {project.major}
-            {project.highlight && (
-              <div>
-                <br />
-                <b>{project.highlight}</b>
-              </div>
-            )}
-          </div>
         </div>
       </div>
       <footer className="card-footer">
@@ -96,7 +93,7 @@ makeCard = project => {
         >
           Facebook
         </a>
-        {project.igsocial && (
+        {project.twsocial && (
           <a
             href={project.twsocial}
             target="_blank"
@@ -113,15 +110,20 @@ makeCard = project => {
 
 render() {
   return (
-    <div id="projects"=style {{width: '100%'}}>
+    <div id="exec" style = {{width: '100%'}}>
       <div
-        style == {{
+        style = {{
           fontSize:'4em',
           margin: 30,
-          marginTop: 0.
+          marginTop: 0,
           marginBottom: 10
         }}
         >
-
-  )
+          <b>Executive Board</b>
+          </div>
+          {this.getExecs()}
+          <br />
+      </div>
+    );
+  }
 }

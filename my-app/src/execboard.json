@@ -1,13 +1,12 @@
 [
   {
     "name": "Kori Vernon",
-    "image": "image",
+    "image": "./kori_vernon.jpg",
     "role": "Social Media Manager",
-    "major": "Tandon School of Engineering Computer Science, B.S., 2022",
+    "major": "Tandon School of Engineering, Computer Science, B.S., 2022",
     "priority": "1",
     "summary": "Forward-thinking, hardworking, outgoing Computer Science student at New York University, always looking to help out anyone in any way. Founder of the Organization for Melanin Empowerment, advocate for social justice and Martin Luther King Jr. Scholar at New York University. Entrepreneur at heart, with dreams to stratify the problems of the world and solve them through Statistics, Data Science, and Artificial Intelligence, to find creative and innovative solutions to problems and help as many people as possible. Originally born and raised in Raleigh, North Carolina",
     "igsocial": "https://www.instagram.com/soccermomkori/",
-    "fbsocial": "",
-    "twsocial": ""
+    "fbsocial": "https://www.facebook.com/korivernon1"
   }
 ]

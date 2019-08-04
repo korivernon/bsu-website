@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
+import Grid from '@material-ui/core/Grid';
 
 export default class AboutComponent extends Component {
   getAbout = () => {
     return (
       <div style={{ maxWidth: '100%', textAlign: 'center', margin: 20 }}>
-        <span = {{
-          maxWidth: '65vw',
-          fontSize: '1.2em',
-          textAlign:'left',
-          display: 'block',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          lineHeight: '24pt'
-        }}
-      >
+        <span
+          style = {{
+            maxWidth: '65vw',
+            fontSize: '1.2em',
+            textAlign:'left',
+            display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            lineHeight: '24pt'
+          }}
+        >
         The Black Student Union at New York University provides an opportunity
         for students whose mission or identity are linked to the experiences of
         the African Diaspora to pull together to discuss co-sponsoring events,
@@ -31,23 +33,23 @@ export default class AboutComponent extends Component {
         culture. No matter where we come from, we cannot deny the fact that we
         are BLACK! So let’s be proud of our accomplishments. Let’s embrace being
         here, and let’s make the most of our time together.
-
         </span>
       </div>
     );
   };
-  
+
   render() {
     return (
       <div id="about" style= {{width: '100%'}}>
         <div style= {{
-          fontSize: '4em',
-          margin:30,
+          fontSize: '3.5em',
+          margin:10,
           marginTop: 0,
           marginBottom: 0
         }}
         >
-          <b>About NYU Black Student Union</b>
+          <p>Black Student Union @ NYU</p>
+          <img src='./bsu_family.jpg' width="60%" alt="logo" />
         </div>
           {this.getAbout()}
         <br/>

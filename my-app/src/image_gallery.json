@@ -1,0 +1,14 @@
+[
+  {
+    "alternate": "Kori Vernon",
+    "image": "./kori_vernon.jpg",
+    "description":"Kori Vernon's stupid ass",
+    "priority": "1"
+  },
+  {
+    "alternate": "Kori Vernon",
+    "image": "./kori_vernon.jpg",
+    "description":"His stupid ass again",
+    "priority":"2"
+  }
+]
